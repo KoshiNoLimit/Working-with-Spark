@@ -5,6 +5,7 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.broadcast.Broadcast;
 import scala.Tuple2;
 import scala.Tuple3;
+import scala.Tuple4;
 
 import java.util.Map;
 
@@ -28,7 +29,8 @@ public class AirJoin {
 
         final Broadcast<Map<Integer, String>> airportsBroadcasted = sc.broadcast(stringAirportDataMap);
 
-        JavaPairRDD<>
+        JavaPairRDD<Tuple2<Integer, Integer>, Tuple4<String, String, Double, Double>> result = sameFlightsResults
+                .flatMapToPair(s -> new Tuple2<>(s._1, new Tuple4<>(airportsBroadcasted.getValue(s._1._1, ))))
 
 
 
