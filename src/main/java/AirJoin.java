@@ -28,7 +28,7 @@ public class AirJoin {
 
         final Broadcast<Map<Integer, String>> airportsBroadcasted = sc.broadcast(stringAirportDataMap);
 
-        
+        JavaPairRDD<>
 
 
 
