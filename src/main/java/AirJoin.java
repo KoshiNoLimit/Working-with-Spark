@@ -25,6 +25,8 @@ public class AirJoin {
 
         Map<Integer, String> stringAirportDataMap = airPairs.collectAsMap();
 
+        final Broadcast<Map<String, AirportData>> airportsBroadcasted = sc.broadcast(stringAirportDataMap);
+
 
 
 
