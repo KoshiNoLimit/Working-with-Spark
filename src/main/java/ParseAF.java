@@ -31,9 +31,9 @@ public class ParseAF {
 
     static String[] parseFly(String s) {
         String[] lines = s.split(DELIMITER_FLY);
-        if(lines[CANCEL].equals(IS_CANCEL) || lines[DELAY].equals(NOT_DELAY) || lines[DELAY].equals("")) {
-            return EMPTY;
-        }
+//        if(lines[CANCEL].equals(IS_CANCEL) || lines[DELAY].equals(NOT_DELAY) || lines[DELAY].equals("")) {
+//            return EMPTY;
+//        }
         return deleteCommas(lines);
     }
 }
