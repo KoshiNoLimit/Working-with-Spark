@@ -1,8 +1,6 @@
 import scala.Tuple2;
 
 class CraftPair {
-    
-    private static final bool INTIME = 1;
 
     static Tuple2<Integer, String> airPair(String s) {
         String[] pair = ParseAF.parseAir(s);
