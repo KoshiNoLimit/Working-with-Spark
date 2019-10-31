@@ -11,7 +11,7 @@ public class AirJoin {
         JavaRDD<String> flights = sc.textFile("TIME3.csv");
 
         JavaRDD<String> airports = sc.textFile("AIR3.csv");
-        JavaPairRDD<Integer, String> airPairs = airports.mapToPair();
+        JavaPairRDD<Integer, String> airPairs = airports.mapToPair(CraftPair::airPair);
 
 
     }
