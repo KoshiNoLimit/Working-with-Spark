@@ -9,10 +9,10 @@ public class ParseAF {
     static final Integer DELAY = 18;
     static final Integer AIRPORT_NAME = 1;
     private static final String[] EMPTY = new String[0];
-    private static final Integer CANCEL = 19;
+    static final Integer CANCEL = 19;
     private static final String DELIMITER_FLY = ",";
     private static final String DELIMITER_AIR = "\",\"";
-    private static final String IS_CANCEL = "1.00";
+    static final String IS_CANCEL = "1.00";
     private static final String NOT_DELAY = "0.00";
 
     private static final String COMMA = "\"";
