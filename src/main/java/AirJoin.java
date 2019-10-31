@@ -29,11 +29,12 @@ public class AirJoin {
 
         final Broadcast<Map<Integer, String>> airportsBroadcasted = sc.broadcast(stringAirportDataMap);
 
-        JavaPairRDD <Tuple2<Integer, Integer>, Tuple2<String, String>, Tuple2<Double, Double>> result = sameFlightsResults
-                .flatMapToPair(s -> new Tuple3<>(s._1(),
-                        new Tuple2<>(airportsBroadcasted.value().get(s._1()._1()), airportsBroadcasted.value().get(s._1()._2())),
-                        s._1(),
-                        s._2()
+        JavaPairRDD <Tuple2<Integer, Integer>, Tuple2<Tuple2<String, String>, Tuple2<Double, Double>>> result = sameFlightsResults
+                .flatMapToPair(s -> new Tuple2<>(s._1(),
+                        new Tuple2<>(
+                            new Tuple2<>(airportsBroadcasted.value().get(s._1()._1()), airportsBroadcasted.value().get(s._1()._2())),
+                            s._2()
+                        )
                 ));
 
 
