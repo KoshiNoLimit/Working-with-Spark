@@ -20,6 +20,7 @@ public class AirJoin {
 
         JavaRDD<String> airports = sc.textFile("AIR3.csv");
         JavaPairRDD<Integer, String> airPairs = airports.mapToPair(CraftPair::airPair);
+        
 
 
 
