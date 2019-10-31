@@ -1,4 +1,4 @@
-public class ParseAF {
+class ParseAF {
     static final Integer AIRPORT_ID = 0;
     static final Integer F_FIRST_AIR_ID = 10;
     static final Integer F_SECOND_AIR_ID = 14;
@@ -31,9 +31,6 @@ public class ParseAF {
 
     static String[] parseFly(String s) {
         String[] lines = s.split(DELIMITER_FLY);
-//        if(lines[CANCEL].equals(IS_CANCEL) || lines[DELAY].equals(NOT_DELAY) || lines[DELAY].equals("")) {
-//            return EMPTY;
-//        }
         return deleteCommas(lines);
     }
 }
