@@ -13,7 +13,7 @@ public class ParseAF {
     private static final String DELIMITER_FLY = ",";
     private static final String DELIMITER_AIR = "\",\"";
     static final String IS_CANCEL = "1.00";
-    private static final String NOT_DELAY = "0.00";
+    static final String NOT_DELAY = "0.00";
 
     private static final String COMMA = "\"";
 
