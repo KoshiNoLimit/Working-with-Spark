@@ -1,5 +1,8 @@
 public class ParseAF {
     static final Integer AIRPORT_ID = 0;
+    static final Integer F_FIRST_AIR_ID = 11;
+    static final Integer F_SECOND_AIR_ID = 14;
+
     static final Integer FLY_ID = 14;
     static final Integer AIRPORT_IND = 0;
     static final Integer FLY_IND = 1;
