@@ -9,6 +9,7 @@ public class AirJoin {
         JavaSparkContext sc = new JavaSparkContext(conf);
 
         JavaRDD<String> flights = sc.textFile("TIME3.csv");
+        
 
         JavaRDD<String> airports = sc.textFile("AIR3.csv");
         JavaPairRDD<Integer, String> airPairs = airports.mapToPair(CraftPair::airPair);
