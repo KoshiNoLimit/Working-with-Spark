@@ -5,6 +5,8 @@ import org.apache.spark.api.java.JavaSparkContext;
 import scala.Tuple2;
 import scala.Tuple3;
 
+import java.util.Map;
+
 public class AirJoin {
     public static void main(String[] args) {
         SparkConf conf  = new SparkConf().setAppName("L3");
@@ -20,7 +22,9 @@ public class AirJoin {
 
         JavaRDD<String> airports = sc.textFile("AIR3.csv");
         JavaPairRDD<Integer, String> airPairs = airports.mapToPair(CraftPair::airPair);
-        
+
+        Map<Integer, String>
+
 
 
 
