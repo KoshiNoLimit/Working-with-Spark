@@ -11,7 +11,8 @@ public class AirJoin {
 
         JavaRDD<String> flights = sc.textFile("TIME3.csv");
         JavaPairRDD<Tuple2<Integer, Integer>, Tuple2<Double, Double>> flightPairs = flights.mapToPair(CraftPair::flyPair);
-        JavaPairRDD<Tuple2<Integer, Integer>, Tuple2<Double, Double>> keyFlightPairs = flightPairs.reduceByKey(())
+        JavaPairRDD<Tuple2<Integer, Integer>, Tuple2<Double, Double>> keyFlightPairs = flightPairs
+                .reduceByKey((a, b)-> new Tuple2<>())
 
         JavaRDD<String> airports = sc.textFile("AIR3.csv");
         JavaPairRDD<Integer, String> airPairs = airports.mapToPair(CraftPair::airPair);
