@@ -8,7 +8,7 @@ class CraftPair {
 
     static Tuple2<Tuple2<Integer, Integer>, Tuple2<Double, Double>> flyPair(String s) {
         String[] rows = ParseAF.parseFly(s);
-        return 
+        return new Tuple2(Tuple2(Integer, Integer), Tuple2(Double, Double))()
 
 
 
