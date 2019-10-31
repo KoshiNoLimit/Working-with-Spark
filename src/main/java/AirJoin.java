@@ -1,4 +1,5 @@
 import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 
@@ -10,6 +11,7 @@ public class AirJoin {
         JavaRDD<String> flights = sc.textFile("TIME3.csv");
 
         JavaRDD<String> airports = sc.textFile("AIR3.csv");
+        JavaPairRDD<Integer, String> air_pair = 
 
 
     }
