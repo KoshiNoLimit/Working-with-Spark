@@ -11,6 +11,7 @@ class CraftPair {
         if (rows[ParseAF.CANCEL].equals(ParseAF.IS_CANCEL)) {
             return new Tuple2<>(new Tuple2<>(rows[ParseAF.F_FIRST_AIR_ID], rows[ParseAF.F_SECOND_AIR_ID]), new Tuple2<>(0, 1));
         }
+        
 
 
         return null;
