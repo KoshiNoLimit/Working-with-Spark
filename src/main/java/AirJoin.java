@@ -14,7 +14,6 @@ public class AirJoin {
         JavaSparkContext sc = new JavaSparkContext(conf);
 
         JavaRDD<String> flights = sc.textFile("TIME3.csv");
-
         JavaPairRDD<Tuple2<Integer, Integer>, Tuple3<Double, Double, Double>> flightPairs = flights
                 .mapToPair(CraftPair::flyPair);
         JavaPairRDD<Tuple2<Integer, Integer>, Tuple3<Double, Double, Double>> keyFlightPairs = flightPairs
