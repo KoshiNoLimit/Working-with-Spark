@@ -37,6 +37,7 @@ public class AirJoin {
                                                 airportsBroadcasted.value().get(s._1()._1()),
                                                 airportsBroadcasted.value().get(s._1()._2())),
                                         s._2())));
-        result.saveAsTextFile("output");
+        result.saveAsTextFile("result");
     }
 }
+
